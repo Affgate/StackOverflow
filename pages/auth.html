@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>asd</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/main.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		
+		<header class="header">
+			<div class="header_content">
+				<div class="header_logo">
+					<h1><a href="/">StackOverflow 2</a></h1>
+				</div>
+				<div class="header_auth">
+					<i class="fas fa-sign-in-alt" id="sign_in"></i>
+				</div>
+			</div>
+			<div class="header_inner_content">
+				<div class="auth_form">
+					<header class="auth_text">
+						<h1>Вход</h1>
+					</header>
+					<!-- По умолчанию ошибки и успехи скрыты! Выводить их лишь в нужных случиях -->
+					<!-- <h1 class="auth_success">Получилось!</h1> -->
+					<!-- <h1 class="auth_error">Ошибка!</h1> -->
+					<form method="POST">
+						<div class="auth_group">
+							<input type="text" name="nickname" placeholder="Логин">
+							<input type="password" name="password" placeholder="Пароль">
+						</div>
+						<button type="submit" name="do_auth">Вход</button>
+						<button>
+							<a href="/pages/signup.html">Зарегистрироваться</a>
+						</button>
+					</form>
+				</div>
+			</div>
+		</header>
+
+	</div>
+
+	<!-- script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		
+		<header class="header">
+			<div class="header_content">
+				<div class="header_logo">
+					<h1><a href="/">StackOverflow 2</a></h1>
+				</div>
+				<div class="header_auth">
+					<a href="/pages/auth.html">
+						<i class="fas fa-sign-in-alt" id="sign_in"></i>
+					</a>
+				</div>
+			</div>
+			<div class="header_inner_content">
+				<div class="main_default_content">
+					<header class="header_text">
+						<h1>StackOverflow 2</h1>
+					</header>
+					<button type="submit">
+						<i class="fas fa-sign-in-alt" id="sign_in"></i>
+						<a href="/pages/auth.html">Присоедениться</a>
+					</button>
+				</div>
+			</div>
+		</header>
+
+	</div>
+
+	<!-- script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- js code -->
+	<script>
+		$('#sign_in').click(function(){
+			$('.main_default_content').addClass('hidden');
+			$('.auth_form').addClass('active');
+		});
+	</script>
+
+</body>
+</html>

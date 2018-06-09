@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300, 400');
+
+// шрифты
+
+$main_font: 'Roboto', sans-serif;
+$main_color_text: #262626;
+
+// Миксины
+
+@mixin header_text() {
+	font-family: $main_font;
+	font-weight: 300;
+	color: $main_color_text;
+}
+
+@mixin btn_hover() {
+	transition: all .1s;
+	a {
+		color: #fff;
+	}
+}
+
+@mixin btn() {
+	padding: 10px 15px;
+	background: rgba(0,0,0,0);
+	outline: none;
+	border: 1px solid #368cbf;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #368cbf;
+	transition: all .2s;
+	&:hover {
+		background: #368cbf;
+		color: #fff;
+	}
+	a {
+		color: #368cdf;
+	}
+}
+
+// Дальше
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html, #wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+input, button {
+	outline: none;
+}
+
+.header {
+	width: 100%;
+	height: 100vh;
+	background: url('https://ideasphere.com/wp-content/uploads/2016/08/Savin-NY-Website-Background-Web-1-1024x576.jpg') center;
+	background-size: cover;
+	.header_content {
+		width: 100%;
+		height: 70px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-family: $main_font;
+		.header_logo {
+			margin-left: 100px;
+			h1 {
+				font-weight: 300;
+				a {
+					color: $main_color_text;
+				}
+			}
+		}
+		.header_auth {
+			margin-right: 100px;
+			i {
+				font-size: 25px;
+				color: $main_color_text;
+			}
+		}
+	}
+	.header_inner_content {
+		width: 100%;
+		height: calc(100vh - 70px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.main_default_content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			.header_text {
+				h1 {
+					text-align: center;
+					font-size: 90px;
+					@include header_text;
+				}
+			}
+			button {
+				align-self: flex-start;
+				margin: 100px auto;
+				margin-bottom: 0;
+				@include btn;
+				i {
+					margin-right: 10px;
+				}
+				&:hover {
+					@include btn_hover;
+				}
+			}
+		}
+		.auth_form {
+			width: 30%;
+			padding: 15px;
+			border: 1px solid $main_color_text;
+			border-radius: 3px;
+			.auth_text {
+				h1 {
+					@include header_text;
+				}
+			}
+			form {
+				.auth_group {
+					display: flex;
+					flex-direction: column;
+					input {
+						font-size: 15px;
+						margin-top: 15px;
+						font-family: $main_font;
+						font-weight: 300;
+						padding: 10px 15px;
+						border: 0;
+						border-bottom: 1px solid $main_color_text;
+						background: rgba(0,0,0,0);
+
+						&:focus {
+							border-bottom: 1px solid #368cbf;
+						}
+					}
+				}
+			}
+			button {
+				margin-top: 15px;
+				@include btn;
+				&:hover {
+					@include btn_hover;
+				}
+			}
+		}
+	}
+}
+
+// Другое
+
+.auth_success {
+	font-size: 20px;
+	@include header_text;
+	padding: 5px;
+	background-color: #41D3BD;
+	margin-top: 10px;
+}
+
+.auth_error {
+	@extend .auth_success;
+	background: #FF7260;
+}
